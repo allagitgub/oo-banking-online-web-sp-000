@@ -7,4 +7,8 @@ class BankAccount
     @balance = 1000
     @status = "open"
   end
+
+  def name=(name)
+    raise_error NameChangeNotAllowedError "You can't change the name on the account"
+  end
 end
