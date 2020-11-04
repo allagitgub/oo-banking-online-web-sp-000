@@ -17,7 +17,7 @@ class Transfer
     if self.status == "pending"
       puts amount
       puts sender.balance
-      if amount > sender.balance
+      if amount > sender.balance || sender.status == "closed" || receiver.status == "closed"
         self.status = "rejected"
         "Transaction rejected. Please check your account balance."
       else
