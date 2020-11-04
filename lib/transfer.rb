@@ -10,6 +10,6 @@ class Transfer
   end
 
   def valid?
-    self.sender.value? && self.receiver.valid?
+    self.sender.valid? && self.receiver.valid?
   end
 end
