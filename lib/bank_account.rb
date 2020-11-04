@@ -11,4 +11,8 @@ class BankAccount
   def name=(name)
     raise_error NameChangeNotAllowedError "You can't change the name on the account"
   end
+
+  def deposit(amount)
+    balance =+ amount
+  end
 end
